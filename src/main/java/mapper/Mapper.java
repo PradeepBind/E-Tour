@@ -1,7 +1,9 @@
 package mapper;
 
 import dto.CategoryDTO;
+import dto.SubcategoryDTO;
 import entity.Category;
+import entity.Subcategory;
 
 public class Mapper {
 	public static CategoryDTO MaptoCategoryDTO(Category category) {
@@ -29,4 +31,11 @@ public class Mapper {
 
         return category;
     }
+	
+	public static SubcategoryDTO MaptoSubcategoryDto(Subcategory subcat) {
+		SubcategoryDTO subDto = new SubcategoryDTO();
+		subDto.setCategoryId(subcat.getSubcategoryId());
+		subDto.setSubcategoryName(subcat.getSubcategoryName());
+		subDto.setSubcategoryImagePath(subcat.getSubcategoryImagePath());
+	}
 }
